@@ -22,7 +22,7 @@ import json
 import csv
 import os
  
-# SETUP PTAH VARIABLES
+# SETUP PATH VARIABLES
 # The source JSON file is created by nft-generator-py
 json_source = 'path/to/metadata/all-objects.json'
 # Now name a file for the output
@@ -40,7 +40,7 @@ metadata_file = open(output_csv_file, 'w', newline='')
 # Create a CSV writer object
 csv_writer = csv.writer(metadata_file)
 
-# Build a CSV header
+# BUILD A CSV HEADER
 headerList = ["tokenID", "name", "description", "file_name", "external_url"]
 # Add the attributes from the source file as columns
 for a in nft_data[0]["attributes"]:
@@ -49,7 +49,7 @@ for a in nft_data[0]["attributes"]:
 # Write out the CSV header
 csv_writer.writerow(headerList)
 
-# Build rows of data from each NFT
+# BUILD A ROW FOR EACH CSV
 for nft in nft_data:
     	# Start the row with fixed columns
 	nftValues = [nft["token_id"], nft["name"], nft["description"], os.path.basename(nft["image"]), ""]
