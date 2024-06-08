@@ -30,7 +30,7 @@ output_csv_file = 'path/to/metadata/metadata-file.csv'
 
 # Load data from the source JSON file
 with open(json_source) as json_file:
-    data = json.load(json_file)
+	data = json.load(json_file)
 # 'nft_details' refers to the entire collection
 nft_data = data['nft_details']
 
@@ -51,12 +51,12 @@ csv_writer.writerow(headerList)
 
 # Build rows of data from each NFT
 for nft in nft_data:
-    # Start the row with fixed columns
+    	# Start the row with fixed columns
 	nftValues = [nft["token_id"], nft["name"], nft["description"], os.path.basename(nft["image"]), ""]
 	# Then write columns of attribute values
 	for attr in nft["attributes"]:
 		nftValues.append(attr["value"])
-		
+	# Write the row to the CSV	
 	csv_writer.writerow(nftValues)
 
 # Close the file
