@@ -49,7 +49,7 @@ for a in nft_data[0]["attributes"]:
 # Write out the CSV header
 csv_writer.writerow(headerList)
 
-# BUILD A ROW FOR EACH CSV
+# BUILD A ROW FOR EACH NFT
 for nft in nft_data:
     	# Start the row with fixed columns
 	nftValues = [nft["token_id"], nft["name"], nft["description"], os.path.basename(nft["image"]), ""]
