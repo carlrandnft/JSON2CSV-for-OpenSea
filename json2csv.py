@@ -17,6 +17,11 @@ Carl Arlynn Rand, June 2024
 #   { "nft_details": 
 # On the end of the last line add
 #   } 
+#
+# REMOVE BLANK COLUMNS
+# Optional columns such as external_url
+# must be removed or the file will
+# cause an error at OpenSea.
  
 import json
 import csv
